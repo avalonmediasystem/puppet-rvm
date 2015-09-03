@@ -28,7 +28,7 @@ Puppet::Type.type(:rvm_gem).provide(:gem) do
     end
 
     if name = hash[:justme]
-      command << name + "$"
+      gem_list_command << "^" + name + "$"
     end
 
     list = []
